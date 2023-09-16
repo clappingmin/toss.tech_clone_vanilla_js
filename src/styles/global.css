@@ -1,0 +1,38 @@
+@import url(reset.css);
+
+:root {
+  --gray50: #f9fafb;
+  --gray100: #8b95a1;
+  --gray200: #4e5968;
+  --gray300: #333d4b;
+
+  --grayOpacity100: rgba(2, 32, 71, 0.05);
+
+  --blue100: #3182f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  max-width: 1140px;
+  height: 60px;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+#app {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  margin: auto;
+}
