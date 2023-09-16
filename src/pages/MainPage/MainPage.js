@@ -1,15 +1,16 @@
 import './MainPage.css';
 import ArticleComponent from '../../components/ArticleComponent/ArticleComponent';
 import articles_mock_data from '../../../article_mock_data.json';
+import { getCurrentPathName } from '../../router';
 
 class MainPage {
-  constructor(pageType) {
-    switch (pageType) {
-      case 'tech':
-        this.pageType = '기술';
-        break;
-      case 'design':
+  constructor() {
+    switch (getCurrentPathName()) {
+      case '/design':
         this.pageType = '디자인';
+        break;
+      default:
+        this.pageType = '기술';
     }
   }
 
