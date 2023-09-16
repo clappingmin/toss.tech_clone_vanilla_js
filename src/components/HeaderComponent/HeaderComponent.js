@@ -8,7 +8,7 @@ class HeaderComponent {
   render() {
     return `
     <nav class="header-wrapper">
-    <img class="logo" src="../../assets/logo.svg" />
+    <img class="logo" src="src/assets/icon-logo.svg" />
     <ul class="button-container">
       <li><a class="button--clear">디자인</a></li>
       <li><a class="button--clear">개발</a></li>

@@ -4,11 +4,12 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   min-width: 100px;
-  min-height: 10px;
+  height: 20px;
 }
 
 .button-container {
@@ -25,7 +26,7 @@ a {
 
 .button--clear {
   background-color: transparent;
-  color: var(--gray200);
+  color: var(--gray300);
   padding: 12px 10px;
 }
 

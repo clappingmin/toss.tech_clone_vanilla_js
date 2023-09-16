@@ -3,8 +3,9 @@
 :root {
   --gray50: #f9fafb;
   --gray100: #8b95a1;
-  --gray200: #4e5968;
-  --gray300: #333d4b;
+  --gray200: #6b7684;
+  --gray300: #4e5968;
+  --gray400: #333d4b;
 
   --grayOpacity100: rgba(2, 32, 71, 0.05);
 
@@ -27,7 +28,6 @@ header {
 
 .wrapper {
   width: 100vw;
-  height: 100vh;
 }
 
 #app {
@@ -35,4 +35,9 @@ header {
   max-width: 980px;
   height: 100%;
   margin: auto;
+}
+
+footer {
+  background-color: var(--gray50);
+  padding: 50px 0 100px;
 }
