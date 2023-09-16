@@ -1,13 +1,27 @@
+import './MainPage.css';
 import ArticleComponent from '../../components/ArticleComponent/ArticleComponent';
 import articles_mock_data from '../../../article_mock_data.json';
 
 class MainPage {
-  constructor() {
-    console.log(articles_mock_data);
+  constructor(pageType) {
+    switch (pageType) {
+      case 'tech':
+        this.pageType = '기술';
+        break;
+      case 'design':
+        this.pageType = '디자인';
+    }
   }
 
   render() {
-    return this.renderArticles();
+    return `
+    <div class="main-page-wrapper">
+    <div class="page-type">${this.pageType}</div>
+    <div class="articles-container">
+      ${this.renderArticles()}
+    </div>
+  </div>
+    `;
   }
 
   renderArticles() {

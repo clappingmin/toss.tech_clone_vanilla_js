@@ -6,10 +6,12 @@
 
 .article-wrapper:hover .content__title {
   color: var(--blue100);
+  transition: 0.2s ease-in-out;
 }
 
 .article-wrapper:hover .article-image {
   transform: translateY(-3%);
+  transition: 0.2s ease-in-out;
 }
 
 .article-image {
