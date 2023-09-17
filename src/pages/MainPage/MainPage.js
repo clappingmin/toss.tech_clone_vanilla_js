@@ -29,12 +29,13 @@ class MainPage {
     let articles = '';
 
     for (let mock_article of articles_mock_data) {
+      const id = mock_article.id;
       const title = mock_article.title;
       const detail = mock_article.detail;
       const date = mock_article.date;
       const image = mock_article.image;
 
-      const article = new ArticleComponent(title, detail, date, image);
+      const article = new ArticleComponent(id, title, detail, date, image);
       articles += article.render();
     }
 

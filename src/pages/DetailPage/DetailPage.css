@@ -1,0 +1,63 @@
+.detail-page-wrapper {
+  width: 700px;
+  margin: auto;
+}
+
+.detail-header {
+  margin-top: 36px;
+}
+
+.detail-header__img {
+  width: 100%;
+  border-radius: 12px;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+.detail-header__title {
+  display: inline-block;
+  margin-top: 36px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--gray400);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.detail-header__user-info {
+  display: flex;
+  gap: 14px;
+  align-items: end;
+}
+
+.user__img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.user_name {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--gray300);
+  white-space: nowrap;
+}
+
+.user__job {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--gray300);
+  white-space: nowrap;
+}
+
+.user__upload-date {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--gray100);
+}
+
+.detail__content {
+  width: 100%;
+  margin-top: 54px;
+}
