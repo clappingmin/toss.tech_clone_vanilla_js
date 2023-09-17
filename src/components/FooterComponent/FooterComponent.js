@@ -30,19 +30,19 @@ class FooterComponent {
     </div>
     <ul class="footer-social">
       <li class="footer-social__item">
-        <a><img src="public/icon-facebook.svg" /></a>
+        <a><img src="/public/icon-facebook.svg" /></a>
       </li>
       <li class="footer-social__item">
-        <a><img src="public/icon-blog.svg" /></a>
+        <a><img src="/public/icon-blog.svg" /></a>
       </li>
       <li class="footer-social__item">
-        <a><img src="public/icon-naver.svg" /></a>
+        <a><img src="/public/icon-naver.svg" /></a>
       </li>
       <li class="footer-social__item">
-        <a><img src="public/icon-twitter.svg" /></a>
+        <a><img src="/public/icon-twitter.svg" /></a>
       </li>
       <li class="footer-social__item">
-        <a><img src="public/icon-instagram.svg" /></a>
+        <a><img src="/public/icon-instagram.svg" /></a>
       </li>
     </ul>
   </div>
