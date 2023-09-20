@@ -1,0 +1,46 @@
+@import url(reset.css);
+
+:root {
+  --gray50: #f9fafb;
+  --gray100: #8b95a1;
+  --gray200: #6b7684;
+  --gray300: #4e5968;
+  --gray400: #333d4b;
+
+  --grayOpacity100: rgba(2, 32, 71, 0.05);
+
+  --blue100: #3182f6;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  max-width: 1140px;
+  height: 60px;
+  margin: auto;
+}
+
+.wrapper {
+  width: 100vw;
+}
+
+#app {
+  width: 100%;
+  max-width: 980px;
+  height: 100%;
+  margin: auto;
+}
+
+footer {
+  background-color: var(--gray50);
+  padding: 50px 0 100px;
+}
