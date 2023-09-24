@@ -1,17 +1,14 @@
+import { pageTypeToName } from './../../shared/enums/global.enum';
 import './MainPage.css';
 import ArticleComponent from '../../components/Article/Article';
 import articles_mock_data from '../../../article_mock_data.json';
 import { getCurrentPathName } from '../../router';
 
 class MainPage {
+  private pageType;
+
   constructor() {
-    switch (getCurrentPathName()) {
-      case '/design':
-        this.pageType = '디자인';
-        break;
-      default:
-        this.pageType = '기술';
-    }
+    this.pageType = pageTypeToName[getCurrentPathName().replace('/', '')];
   }
 
   render() {
@@ -28,16 +25,10 @@ class MainPage {
   renderArticles() {
     let articles = '';
 
-    for (let mock_article of articles_mock_data) {
-      const id = mock_article.id;
-      const title = mock_article.title;
-      const detail = mock_article.detail;
-      const date = mock_article.date;
-      const image = mock_article.image;
-
-      const article = new ArticleComponent(id, title, detail, date, image);
+    articles_mock_data.map((articleData) => {
+      const article = new ArticleComponent(articleData);
       articles += article.render();
-    }
+    });
 
     return articles;
   }

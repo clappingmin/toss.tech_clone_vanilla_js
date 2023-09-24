@@ -6,8 +6,8 @@ const header = new HeaderComponent();
 const footer = new FooterComponent();
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('#header').innerHTML = header.render();
-  document.querySelector('#footer').innerHTML = footer.render();
+  (document.querySelector('#header') as Element).innerHTML = header.render();
+  (document.querySelector('#footer') as Element).innerHTML = footer.render();
 });
 
 router();

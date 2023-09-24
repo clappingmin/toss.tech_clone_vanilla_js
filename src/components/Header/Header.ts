@@ -1,9 +1,7 @@
 import './Header.css';
 
 class HeaderComponent {
-  constructor() {
-    console.log('헤더 생성이다용');
-  }
+  constructor() {}
 
   render() {
     return `
