@@ -1,10 +1,10 @@
 import './Article.css';
-import { Article } from '../../shared/interfaces/article.interface';
+import { IArticle } from '../../shared/interfaces/article.interface';
 
-class ArticleComponent {
-  private newArticle: Article;
+class Article {
+  private newArticle: IArticle;
 
-  constructor(newArticle: Article) {
+  constructor(newArticle: IArticle) {
     this.newArticle = newArticle;
   }
 
@@ -22,4 +22,4 @@ class ArticleComponent {
   }
 }
 
-export default ArticleComponent;
+export default Article;

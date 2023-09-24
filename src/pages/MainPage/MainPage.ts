@@ -1,6 +1,6 @@
 import { pageTypeToName } from './../../shared/enums/global.enum';
 import './MainPage.css';
-import ArticleComponent from '../../components/Article/Article';
+import Article from '../../components/Article/Article';
 import articles_mock_data from '../../../article_mock_data.json';
 import { getCurrentPathName } from '../../router';
 
@@ -26,7 +26,7 @@ class MainPage {
     let articles = '';
 
     articles_mock_data.map((articleData) => {
-      const article = new ArticleComponent(articleData);
+      const article = new Article(articleData);
       articles += article.render();
     });
 

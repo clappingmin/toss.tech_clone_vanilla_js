@@ -1,4 +1,4 @@
-export interface Article {
+export interface IArticle {
   id: number;
   title: string;
   detail: string;
@@ -6,7 +6,7 @@ export interface Article {
   image: string;
 }
 
-export interface DetailArticle extends Article {
+export interface DetailArticle extends IArticle {
   author: {
     name: string;
     job: string;

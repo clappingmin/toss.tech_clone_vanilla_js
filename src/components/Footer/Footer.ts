@@ -1,6 +1,6 @@
 import './Footer.css';
 
-class FooterComponent {
+class Footer {
   constructor() {}
 
   render() {
@@ -50,4 +50,4 @@ class FooterComponent {
   }
 }
 
-export default FooterComponent;
+export default Footer;

@@ -1,9 +1,9 @@
-import HeaderComponent from './components/Header/Header';
-import FooterComponent from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import { router } from './router';
 
-const header = new HeaderComponent();
-const footer = new FooterComponent();
+const header = new Header();
+const footer = new Footer();
 
 document.addEventListener('DOMContentLoaded', () => {
   (document.querySelector('#header') as Element).innerHTML = header.render();

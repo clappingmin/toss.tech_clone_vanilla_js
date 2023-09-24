@@ -1,6 +1,6 @@
 import './Header.css';
 
-class HeaderComponent {
+class Header {
   constructor() {}
 
   render() {
@@ -17,4 +17,4 @@ class HeaderComponent {
   }
 }
 
-export default HeaderComponent;
+export default Header;
