@@ -1,5 +1,5 @@
-import HeaderComponent from './components/HeaderComponent/HeaderComponent';
-import FooterComponent from './components/FooterComponent/FooterComponent';
+import HeaderComponent from './components/Header/Header';
+import FooterComponent from './components/Footer/Footer';
 import { router } from './router';
 
 const header = new HeaderComponent();

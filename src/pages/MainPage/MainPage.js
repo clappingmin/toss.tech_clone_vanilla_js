@@ -1,5 +1,5 @@
 import './MainPage.css';
-import ArticleComponent from '../../components/ArticleComponent/ArticleComponent';
+import ArticleComponent from '../../components/Article/Article';
 import articles_mock_data from '../../../article_mock_data.json';
 import { getCurrentPathName } from '../../router';
 

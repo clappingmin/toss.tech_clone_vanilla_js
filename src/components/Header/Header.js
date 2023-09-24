@@ -1,4 +1,4 @@
-import './HeaderComponent.css';
+import './Header.css';
 
 class HeaderComponent {
   constructor() {

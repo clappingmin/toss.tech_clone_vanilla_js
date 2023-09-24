@@ -1,4 +1,4 @@
-import './FooterComponent.css';
+import './Footer.css';
 
 class FooterComponent {
   constructor() {}

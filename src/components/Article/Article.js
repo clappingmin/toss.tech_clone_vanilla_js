@@ -1,4 +1,4 @@
-import './ArticleComponent.css';
+import './Article.css';
 
 class ArticleComponent {
   constructor(id, title, detail, date, image) {
