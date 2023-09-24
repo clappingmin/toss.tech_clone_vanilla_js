@@ -5,10 +5,7 @@ import DetailPage from './pages/DetailPage/DetailPage';
  * 현재 주소 가져오기
  * @returns string
  */
-const getCurrentPathName = () => {
-  return window.location.pathname;
-};
-
+const getCurrentPathName = () => window.location.pathname;
 /**
  *  찾는 주소와 일치하는 라우터 가져오기
  * @param {*} pathName
