@@ -10,11 +10,7 @@ class DetailPage {
   }
 
   getData(id) {
-    for (let detail_data of detail_mock_data) {
-      if (detail_data.id == id) return detail_data;
-    }
-
-    return false;
+    return detail_mock_data.find((mockData) => mockData.id == id);
   }
 
   render() {
