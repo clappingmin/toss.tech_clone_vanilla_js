@@ -1,32 +1,36 @@
 import MainPage from './pages/MainPage/MainPage';
 import DetailPage from './pages/DetailPage/DetailPage';
+import { Route } from './shared/interfaces/global.interface';
 
 /**
  * 현재 주소 가져오기
  * @returns string
  */
-const getCurrentPathName = () => {
-  return window.location.pathname;
-};
-
+const getCurrentPathName = (): string => window.location.pathname;
 /**
  *  찾는 주소와 일치하는 라우터 가져오기
- * @param {*} pathName
- * @param {*} routes
- * @returns
+ * @param {string} pathName
+ * @param {Array<Route>} routes
+ * @returns {Route | null}
  */
-const getMatchedRoute = (pathName, routes) => {
+const getMatchedRoute = (
+  pathName: string,
+  routes: Array<Route>
+): Route | null => {
   for (let route of routes) {
     const regex = new RegExp('^' + route.path.replace(/:\w+/g, '(.+)') + '$');
 
     if (regex.test(pathName)) return route;
   }
 
-  return false;
+  return null;
 };
 
-const router = () => {
-  const routes = [
+/**
+ * @returns {void}
+ */
+const router = (): void => {
+  const routes: Array<Route> = [
     { path: '/', page: MainPage },
     { path: '/tech', page: MainPage },
     { path: '/design', page: MainPage },
@@ -38,10 +42,10 @@ const router = () => {
   const matchedRoute =
     getMatchedRoute(currentPathName, routes) || routes[routes.length - 1];
 
-  const view = new matchedRoute.page().render();
+  const view = matchedRoute.page();
 
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('#app').innerHTML = view;
+    (document.querySelector('#app') as Element).innerHTML = view;
 
     // todo: index.html title 동적으로 넣어주기
   });

@@ -1,12 +1,7 @@
-import './HeaderComponent.css';
+import './Header.css';
 
-class HeaderComponent {
-  constructor() {
-    console.log('헤더 생성이다용');
-  }
-
-  render() {
-    return `
+function Header() {
+  return `
     <nav class="header-wrapper">
     <a href='/'><img class="logo" src="/public/icon-logo.svg" /></a>
     <ul class="button-container">
@@ -16,7 +11,6 @@ class HeaderComponent {
     </ul>
   </nav>
   `;
-  }
 }
 
-export default HeaderComponent;
+export default Header;

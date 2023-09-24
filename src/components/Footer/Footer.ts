@@ -1,10 +1,7 @@
-import './FooterComponent.css';
+import './Footer.css';
 
-class FooterComponent {
-  constructor() {}
-
-  render() {
-    return `
+function Footer() {
+  return `
     <div class="footer-wrapper">
     <div class="footer-site-group">
       <div class="footer-site-box">
@@ -47,7 +44,6 @@ class FooterComponent {
     </ul>
   </div>
     `;
-  }
 }
 
-export default FooterComponent;
+export default Footer;
