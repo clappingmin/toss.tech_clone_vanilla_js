@@ -3,42 +3,30 @@ import './DetailPage.css';
 import { getCurrentPathName } from '../../router';
 import { DetailArticle } from '../../shared/interfaces/article.interface';
 
-class DetailPage {
-  private id: number;
-  private articleData?: DetailArticle;
+function DetailPage() {
+  const id = Number(getCurrentPathName()?.split('/')[2]);
+  const articleData = detail_mock_data.find(
+    (mockData: DetailArticle) => mockData.id == id
+  );
 
-  constructor() {
-    this.id = Number(getCurrentPathName()?.split('/')[2]);
-
-    if (this.id) this.articleData = this.getData(this.id);
-  }
-
-  getData(id): DetailArticle | undefined {
-    return detail_mock_data.find(
-      (mockData: DetailArticle) => mockData.id == id
-    );
-  }
-
-  render() {
-    return `
+  return `
     <div class="detail-page-wrapper">
   <div class="detail-header">
-    <img class="detail-header__img" src='${this.articleData?.image}'/>
-    <span class="detail-header__title">${this.articleData?.title}</span>
+    <img class="detail-header__img" src='${articleData?.image}'/>
+    <span class="detail-header__title">${articleData?.title}</span>
     <div class="detail-header__user-info">
-      <img class="user__img" src='${this.articleData?.author.image}'/>
+      <img class="user__img" src='${articleData?.author.image}'/>
       <div>
-        <span class="user__name">${this.articleData?.author.name}</span>
+        <span class="user__name">${articleData?.author.name}</span>
         <span>ㆍ</span>
-        <span class="user__job">${this.articleData?.author.job}</span>
-        <div class="user__upload-date">${this.articleData?.date}</div>
+        <span class="user__job">${articleData?.author.job}</span>
+        <div class="user__upload-date">${articleData?.date}</div>
       </div>
     </div>
   </div>
-  <div class="detail__content">${this.articleData?.detail}</div>
+  <div class="detail__content">${articleData?.detail}</div>
 </div>
     `;
-  }
 }
 
 export default DetailPage;

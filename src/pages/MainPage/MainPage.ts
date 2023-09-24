@@ -4,34 +4,19 @@ import Article from '../../components/Article/Article';
 import articles_mock_data from '../../../article_mock_data.json';
 import { getCurrentPathName } from '../../router';
 
-class MainPage {
-  private pageType;
+function MainPage() {
+  const pageType = pageTypeToName[getCurrentPathName().replace('/', '')];
 
-  constructor() {
-    this.pageType = pageTypeToName[getCurrentPathName().replace('/', '')];
-  }
-
-  render() {
-    return `
+  return `
     <div class="main-page-wrapper">
-    <div class="page-type">${this.pageType}</div>
+    <div class="page-type">${pageType}</div>
     <div class="articles-container">
-      ${this.renderArticles()}
+      ${articles_mock_data.map((articleData) => {
+        return Article(articleData);
+      })}
     </div>
   </div>
     `;
-  }
-
-  renderArticles() {
-    let articles = '';
-
-    articles_mock_data.map((articleData) => {
-      const article = new Article(articleData);
-      articles += article.render();
-    });
-
-    return articles;
-  }
 }
 
 export default MainPage;

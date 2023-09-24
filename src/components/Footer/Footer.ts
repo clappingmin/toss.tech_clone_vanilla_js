@@ -1,10 +1,7 @@
 import './Footer.css';
 
-class Footer {
-  constructor() {}
-
-  render() {
-    return `
+function Footer() {
+  return `
     <div class="footer-wrapper">
     <div class="footer-site-group">
       <div class="footer-site-box">
@@ -47,7 +44,6 @@ class Footer {
     </ul>
   </div>
     `;
-  }
 }
 
 export default Footer;

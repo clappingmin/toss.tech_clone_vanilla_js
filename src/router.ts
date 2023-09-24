@@ -42,7 +42,7 @@ const router = (): void => {
   const matchedRoute =
     getMatchedRoute(currentPathName, routes) || routes[routes.length - 1];
 
-  const view = new matchedRoute.page().render();
+  const view = matchedRoute.page();
 
   document.addEventListener('DOMContentLoaded', () => {
     (document.querySelector('#app') as Element).innerHTML = view;

@@ -1,10 +1,7 @@
 import './Header.css';
 
-class Header {
-  constructor() {}
-
-  render() {
-    return `
+function Header() {
+  return `
     <nav class="header-wrapper">
     <a href='/'><img class="logo" src="/public/icon-logo.svg" /></a>
     <ul class="button-container">
@@ -14,7 +11,6 @@ class Header {
     </ul>
   </nav>
   `;
-  }
 }
 
 export default Header;
