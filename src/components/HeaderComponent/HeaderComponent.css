@@ -1,0 +1,44 @@
+.header-wrapper {
+  width: 92%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  min-width: 100px;
+  height: 20px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+a {
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.button--clear {
+  background-color: transparent;
+  color: var(--gray300);
+  padding: 12px 10px;
+}
+
+.button--clear:hover {
+  background-color: var(--grayOpacity100);
+}
+
+.button--primary {
+  background-color: var(--blue100);
+  color: var(--gray50);
+  padding: 7px 12px;
+}
+
+@media (max-width: 639px) {
+}
