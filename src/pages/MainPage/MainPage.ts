@@ -5,7 +5,9 @@ import articles_mock_data from '../../../article_mock_data.json';
 import { getCurrentPathName } from '../../router';
 
 function MainPage() {
-  const pageType = pageTypeToName[getCurrentPathName().replace('/', '')];
+  const pageType =
+    pageTypeToName[getCurrentPathName().replace('/', '')] ||
+    pageTypeToName['tech'];
 
   return `
     <div class="main-page-wrapper">
